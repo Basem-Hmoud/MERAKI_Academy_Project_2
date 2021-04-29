@@ -1,0 +1,32 @@
+/*design for all page*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-top: 20px;
+  display: flex;
+  border: solid 1px black;
+  padding-left: 20px;
+  width: 100%;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.fotter {
+  display: grid;
+  border: solid black 2px;
+  color: blue;
+  height: 40px;
+  width: 100%;
+  margin-top: 600px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
