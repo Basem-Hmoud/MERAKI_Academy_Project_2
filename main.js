@@ -5,24 +5,29 @@ const arr = [
   {
     name: "toshipa",
     img: "./images/toshipa.png",
+    description: "",
     price: "200JD",
+    rank: "",
     type: "laptop",
   },
   {
     name: "php",
     img: "./images/php.jpg",
+    description: "",
     price: "200JD",
     type: "laptop",
   },
   {
     name: "acer",
     img: "./images/acer.jpg",
+    description: "",
     price: "200JD",
     type: "laptop",
   },
   {
     name: "Dell",
     img: "./images/dell.jpg",
+    description: "",
     price: "200JD",
     type: "laptop",
   },
@@ -30,24 +35,28 @@ const arr = [
   {
     name: "samsung",
     img: "./images/samsungPhone.jpg",
+    description: "",
     price: "200JD",
     type: "phone",
   },
   {
     name: "iphone",
     img: "./images/iphone.jpg",
+    description: "",
     price: "200JD",
     type: "phone",
   },
   {
     name: "Huawei",
     img: "./images/huawei.jpg",
+    description: "",
     price: "200JD",
     type: "phone",
   },
   {
     name: "oppo",
     img: "./images/oppo.jpg",
+    description: "",
     price: "200JD",
     type: "phone",
   },
@@ -55,24 +64,28 @@ const arr = [
   {
     name: "mouse",
     img: "./images/mouse.jpg",
+    description: "",
     price: "200JD",
     type: "Accessories laptop",
   },
   {
     name: "hard disk",
     img: "./images/harddisk.jpg",
+    description: "",
     price: "200JD",
     type: "Accessories laptop",
   },
   {
     name: "keyboard",
     img: "./images/keyboard.jpg",
+    description: "",
     price: "200JD",
     type: "Accessories laptop",
   },
   {
     name: "headphones",
     img: "./images/headphones.jpg",
+    description: "",
     price: "200JD",
     type: "Accessories laptop",
   },
@@ -81,24 +94,28 @@ const arr = [
     name: "Godzilla: King Of The Monsters",
     price: "200JD",
     img: "./images/Godzilla King Of The Monsters.jpg",
-    description: "The film follows the relentless efforts of a secret animal society (Monarch) when it encounters a group of huge monsters, including the formidable dinosaur Godzilla, who confronts the humanoid three-headed King Gadrawy, leaving humanity with an unknown fate.",
+    description:
+      "The film follows the relentless efforts of a secret animal society (Monarch) when it encounters a group of huge monsters, including the formidable dinosaur Godzilla, who confronts the humanoid three-headed King Gadrawy, leaving humanity with an unknown fate.",
     type: "movie",
   },
   {
     name: "Knives Out",
     img: "./images/Knives Out.png",
+    description: "",
     price: "200JD",
     type: "movie",
   },
   {
     name: "Bad Boys For Life",
     img: "./images/Bad Boys For Life.jpg",
+    description: "",
     price: "200JD",
     type: "movie",
   },
   {
     name: "Wolves",
     img: "./images/Wolves.png",
+    description: "",
     price: "200JD",
     type: "movie",
   },
@@ -108,7 +125,7 @@ const l1 = $("#l1"); //لا ظهار محتويات اللاب توب
 const l2 = $("#l2"); //لاظهار محتويات التلفونات
 const l3 = $("#l3"); //لاظهار محتويات اكسسوارات اللاب توب
 const l4 = $("#l4"); //لاظهار محتويات افلام
-const l5 = $("#l5"); 
+const l5 = $("#l5");
 
 const p1 = $("#p1"); //لا ظهار محتويات اللاب توب
 const p2 = $("#p2"); //لاظهار محتويات التلفونات
@@ -161,30 +178,32 @@ for (let i = 0; i < arr.length; i++) {
     <button id="des${i}"> details</button>
     </div>`);
 
-    let cont=$(".content");
     let detail = $(`#des${i}`);
     detail.on("click", () => {
-    console.log("hi every body");
-   
-    //l5.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>`)
-    l5.append(`
+      console.log("hi every body");
+
+      //l5.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>`)
+      l5.append(`
     <div><img src="${arr[i].img}"/></div>
     <div style="color: orange;"><h2>${arr[i].name}</h2>
     <h4>${arr[i].price}</h4>
+    <h3>${arr[i].description}</h3>
     <button> add to card</button>
-    </div>`)
-    l1.hide();
-    p1.hide();
-    l2.hide();
-    p2.hide();
-    l3.hide();
-    p3.hide();
-    l4.hide();
-    p4.hide();
-    l5.show()
+    </div>`);
+
+      l1.hide();
+      p1.hide();
+      l2.hide();
+      p2.hide();
+      l3.hide();
+      p3.hide();
+      l4.hide();
+      p4.hide();
+      l5.show();
     });
   }
 }
+l5.hide();
 // selecting the elements with the `listItem` class
 const lap1 = $("#lap1");
 const pho1 = $("#pho1");
@@ -202,6 +221,7 @@ lap1.on("click", () => {
   l4.hide();
   p4.hide();
   l5.hide();
+  l5.html("");
 });
 // if click in phone show all content phone and Hide the rest of the sections
 pho1.on("click", () => {
@@ -214,6 +234,7 @@ pho1.on("click", () => {
   l4.hide();
   p4.hide();
   l5.hide();
+  l5.html("");
 });
 // if click in Accessories laptop show all content Accessories laptop and Hide the rest of the sections
 AccLab.on("click", () => {
@@ -226,6 +247,7 @@ AccLab.on("click", () => {
   l4.hide();
   p4.hide();
   l5.hide();
+  l5.html("");
 });
 // if click in movie show all content movie and Hide the rest of the sections
 mov.on("click", () => {
@@ -238,6 +260,7 @@ mov.on("click", () => {
   l3.hide();
   p3.hide();
   l5.hide();
+  l5.html("");
 });
 // if click in home show all department
 home.on("click", () => {
@@ -249,7 +272,6 @@ home.on("click", () => {
   p3.show();
   l4.show();
   p4.show();
-  l5.hide()
+  l5.hide();
+  l5.html("");
 });
-
-
