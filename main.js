@@ -3,120 +3,135 @@
 
 const arr = [
   {
-    name: "toshipa",
+    name: "toshipa core i3",
     img: "./images/toshipa.png",
-    description: "",
-    price: "200JD",
+    description:"Hyundai Thinnote-A, 14.1Celeron Laptop, 4GB RAM, 64GB Storage, Expandable 2.5 SATA HDD Slot, Windows 10 Home S Mode, English - Black",
+    price: "230 $",
     rank: "",
     type: "laptop",
   },
   {
-    name: "php",
-    img: "./images/php.jpg",
-    description: "",
-    price: "200JD",
+    name: "hp",
+    img: "./images/hp core i3.jpg",
+    description:"2021 HP 14 HD Thin and Light Laptop, Intel Core i3-1005G1 Processor, 4GB SDRAM RAM 128GB SSD, HDMI, Webcam, 802.11b/g/n/ac, Bluetooth, Windows 10 S, Silver, W/ IFT Accessories",
+    price: "419 $",
+    rank: "",
     type: "laptop",
   },
   {
     name: "acer",
-    img: "./images/acer.jpg",
-    description: "",
-    price: "200JD",
+    img: "./images/acer core i3.jpg",
+    description:"Acer Aspire 5 A515-56-36UT | 15.6 Full HD Display | 11th Gen Intel Core i3-1115G4 Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | Amazon Alexa | Windows 10 Home (S Mode)",
+    price: "350 $",
+    rank: "",
     type: "laptop",
   },
   {
     name: "Dell",
-    img: "./images/dell.jpg",
-    description: "",
-    price: "200JD",
+    img: "./images/Dell core i3.jpg",
+    description:"DELL 2021 Newest inspiron 15 3000 PC Laptop, 15.6 HD Anti-Glare Non-Touch Display, Intel 2-Core 4205U Processor, 8GB RAM, 128GB PCIe SSD, Webcam, Bluetooth, Win 10",
+    price: "439 $",
+    rank: "",
     type: "laptop",
   },
   /////////////////////////////
   {
-    name: "samsung",
-    img: "./images/samsungPhone.jpg",
-    description: "",
-    price: "200JD",
+    name: "Samsung Galaxy S21 5G",
+    img: "./images/Samsung Galaxy S21 5G.jpg",
+    description: "Samsung Galaxy S21 5G | Factory Unlocked Android Cell Phone | US Version 5G Smartphone | Pro-Grade Camera, 8K Video, 64MP High Res | 128GB, Phantom Violet (SM-G991UZVAXAA)",
+    price: "700 $",
+    rank: "",
     type: "phone",
   },
   {
-    name: "iphone",
-    img: "./images/iphone.jpg",
-    description: "",
-    price: "200JD",
+    name: "iPhone 7 Plus",
+    img: "./images/iPhone 7 Plus.jpg",
+    description: "Apple iPhone 7 Plus, 128GB, Black - Fully Unlocked (Renewed)",
+    price: "258 $",
+    rank: "",
     type: "phone",
   },
   {
-    name: "Huawei",
+    name: "HUAWEI Nova 5T",
     img: "./images/huawei.jpg",
-    description: "",
-    price: "200JD",
+    description: "HUAWEI Nova 5T (128GB, 6GB) 6.26 LCD, Kirin 980, 48MP Quad Camera, 22.5W Fast Charge, Dual SIM GSM Unlocked Global 4G LTE International EU Plug with US Adapter (Black)",
+    price: "324 $",
+    rank: "",
     type: "phone",
   },
   {
-    name: "oppo",
+    name: "Oppo Reno 5 Pro",
     img: "./images/oppo.jpg",
-    description: "",
-    price: "200JD",
+    description: "Oppo Reno 5 Pro 5G CPH2201 256GB 12GB RAM International Version - Galactic Silver",
+    price: "630 $",
+    rank: "",
     type: "phone",
   },
   /////////////////////////////
   {
     name: "mouse",
     img: "./images/mouse.jpg",
-    description: "",
-    price: "200JD",
+    description: "Wireless Mouse, RATEL 2.4G Wireless Ergonomic Mouse Computer Mouse Laptop Mouse USB Mouse 6 Buttons with Nano Receiver 3 Adjustable DPI Levels Cordless Wireless Mice for Windows, Mac",
+    price: "10 $",
+    rank: "",
     type: "Accessories laptop",
   },
   {
     name: "hard disk",
     img: "./images/harddisk.jpg",
-    description: "",
-    price: "200JD",
+    description: "Toshiba (HDTB410XK3AA) Canvio Basics 1TB Portable External Hard Drive USB 3.0, Black",
+    price: "45 $",
+    rank: "",
     type: "Accessories laptop",
   },
   {
     name: "keyboard",
     img: "./images/keyboard.jpg",
-    description: "",
-    price: "200JD",
+    description: "Logitech G213 Prodigy Gaming Keyboard",
+    price: "20 $",
+    rank: "",
     type: "Accessories laptop",
   },
   {
     name: "headphones",
     img: "./images/headphones.jpg",
-    description: "",
-    price: "200JD",
+    description: "COWIN E7 Active Noise Cancelling Headphones Bluetooth Headphones with Microphone Deep Bass Wireless Headphones Over Ear, Comfortable Protein Earpads, 30 Hours Playtime for Travel/Work, Black",
+    price: "50 $",
+    rank: "",
     type: "Accessories laptop",
   },
   /////////////////////////////
   {
     name: "Godzilla: King Of The Monsters",
-    price: "200JD",
     img: "./images/Godzilla King Of The Monsters.jpg",
     description:
       "The film follows the relentless efforts of a secret animal society (Monarch) when it encounters a group of huge monsters, including the formidable dinosaur Godzilla, who confronts the humanoid three-headed King Gadrawy, leaving humanity with an unknown fate.",
+    price: "4 $",
+    rank: "",
     type: "movie",
   },
   {
     name: "Knives Out",
     img: "./images/Knives Out.png",
-    description: "",
-    price: "200JD",
+    description: "When the body of novelist Harlan Thrombie is found, Detective Plank assumes the task of investigating the crime, only to find himself involved in many events in order to search for the truth.",
+    price: "4 $",
+    rank: "",
     type: "movie",
   },
   {
     name: "Bad Boys For Life",
     img: "./images/Bad Boys For Life.jpg",
-    description: "",
-    price: "200JD",
+    description: "Burnett - who became an inspector - returns to work with his old colleague (Lori) - who suffers from middle-aged depression, after an Albanian mercenary allocates a prize money for the one who comes in the head of the duo in revenge for his brother who killed at their hands.",
+    price: "15 $",
+    rank: "",
     type: "movie",
   },
   {
     name: "Wolves",
     img: "./images/Wolves.png",
-    description: "",
-    price: "200JD",
+    description: "Sedan Richards (Lucas Till) is a handsome eighteen-year-old teenage boy, forced by circumstances to move after his father and mother die, and his feet lead him to an isolated town called (Lupine Ridge) after he meets a deranged person named Wild Joe (John Papier Ferguson), In this town, Sedan Richards discovers new facts about the origins of his family, and the ancient history of his true roots.",
+    price: "20 $",
+    rank: "",
     type: "movie",
   },
 ];
@@ -143,14 +158,12 @@ for (let i = 0; i < arr.length; i++) {
     </div>`);
     let detaillaptop = $(`#deslaptop${i}`);
     detaillaptop.on("click", () => {
-   
-
-    //l5.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>`)
-    l5.append(`
+      //l5.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>`)
+      l5.append(`
     <div><img src="${arr[i].img}"/></div>
     <div style="color: orange;"><h2>${arr[i].name}</h2>
-    <h4>${arr[i].price}</h4>
     <h3>${arr[i].description}</h3>
+    <h4>${arr[i].price}</h4>
     <button> add to card</button>
     </div>`);
 
@@ -170,22 +183,20 @@ for (let i = 0; i < arr.length; i++) {
 for (let i = 0; i < arr.length; i++) {
   //return all obj type phone name + img
   if (arr[i].type === "phone") {
-    l2.append(`<div><h2>${arr[i].name}</h2>
-    <img src="${arr[i].img}"/>
+    l2.append(`<div ><h2>${arr[i].name}</h2>
+    <img src="${arr[i].img}" style= "height:300px ;"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
     <button id="desPhone${i}"> details</button>
     </div>`);
     let detailPhone = $(`#desPhone${i}`);
     detailPhone.on("click", () => {
-   
-
-    //l5.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>`)
-    l5.append(`
+      //l5.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>`)
+      l5.append(`
     <div><img src="${arr[i].img}"/></div>
     <div style="color: orange;"><h2>${arr[i].name}</h2>
-    <h4>${arr[i].price}</h4>
     <h3>${arr[i].description}</h3>
+    <h4>${arr[i].price}</h4>
     <button> add to card</button>
     </div>`);
 
@@ -206,21 +217,19 @@ for (let i = 0; i < arr.length; i++) {
   //return all obj type Accessories laptop name + img
   if (arr[i].type === "Accessories laptop") {
     l3.append(`<div><h2>${arr[i].name}</h2>
-    <img src="${arr[i].img}"/>
+    <img src="${arr[i].img}" style= "height:300px ;"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
     <button id="desAcc${i}"> details</button>
     </div>`);
     let detailAcc = $(`#desAcc${i}`);
     detailAcc.on("click", () => {
-   
-
-    //l5.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>`)
-    l5.append(`
+      //l5.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>`)
+      l5.append(`
     <div><img src="${arr[i].img}"/></div>
     <div style="color: orange;"><h2>${arr[i].name}</h2>
-    <h4>${arr[i].price}</h4>
     <h3>${arr[i].description}</h3>
+    <h4>${arr[i].price}</h4>
     <button> add to card</button>
     </div>`);
 
@@ -240,7 +249,7 @@ for (let i = 0; i < arr.length; i++) {
 for (let i = 0; i < arr.length; i++) {
   //return all obj type movie laptop name + img
   if (arr[i].type === "movie") {
-    l4.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>
+    l4.append(`<div style="color: orange;padding-bottom: 50px;"><h2>${arr[i].name}</h2>
     <img src="${arr[i].img}"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
@@ -255,8 +264,8 @@ for (let i = 0; i < arr.length; i++) {
       l5.append(`
     <div><img src="${arr[i].img}"/></div>
     <div style="color: orange;"><h2>${arr[i].name}</h2>
-    <h4>${arr[i].price}</h4>
     <h3>${arr[i].description}</h3>
+    <h4>${arr[i].price}</h4>
     <button> add to card</button>
     </div>`);
 

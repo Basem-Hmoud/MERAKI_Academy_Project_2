@@ -1,4 +1,4 @@
-/*design for all page*/
+/*design for all page */
 * {
   margin: 0px;
   padding: 0px;
@@ -17,6 +17,7 @@
   height: 50px;
   justify-content: center;
   align-items: center;
+ color: gray;
 }
 li{
   cursor: pointer;
@@ -34,40 +35,43 @@ li:hover{
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  background-color: brown
 }
 .content {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-
   cursor: pointer;
-  border: solid black 2px;
+  border-style: none;
+  background-color: #ddd;
 
   padding: 10px;
   margin-top: 40px;
   justify-content: center;
   align-items: center;
-  background-color: white;
-}
+ /* background-color: #F5F5F5;
+*/}
 .tab {
   display: flex;
   flex-wrap: wrap;
   row-gap: inherit;
   gap: 40px;
-  border: solid black 2px;
-  background-color: blueviolet;
+  border-style: none;
+   background-color: #ddd; 
   justify-content: center;
   align-items: center;
   height: 400px;
   width: 100%;
-  padding-top: 30px;
-  text-align: center;
+  /*padding-top: 30px;
+  */text-align: center;
+ 
 }
 img {
-  height: 200px;
+  height: 230px;
   width: 300px;
 }
 p {
+  color:#D16E25;
   font-size: 20px;
   font-weight: bold;
   margin-top: 25px;
