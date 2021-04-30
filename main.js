@@ -116,10 +116,11 @@ const p4 = $("#p4"); //لاظهار محتويات افلام
 for (let i = 0; i < arr.length; i++) {
   //return all obj type laptop name + img
   if (arr[i].type === "laptop") {
-    l1.append(`<div><h2>${arr[i].name}</h2>
+    l1.append(`<div class="as"><h2>${arr[i].name}</h2>
     <img src="${arr[i].img}"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
+    <button> details</button>
     </div>`);
   }
 }
@@ -131,6 +132,7 @@ for (let i = 0; i < arr.length; i++) {
     <img src="${arr[i].img}"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
+    <button> details</button>
     </div>`);
   }
 }
@@ -142,6 +144,7 @@ for (let i = 0; i < arr.length; i++) {
     <img src="${arr[i].img}"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
+    <button> details</button>
     </div>`);
   }
 }
@@ -149,11 +152,25 @@ for (let i = 0; i < arr.length; i++) {
 for (let i = 0; i < arr.length; i++) {
   //return all obj type movie laptop name + img
   if (arr[i].type === "movie") {
-    l4.append(`<div><h2>${arr[i].name}</h2>
+    l4.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>
     <img src="${arr[i].img}"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
+    <button id="des${i}"> details</button>
     </div>`);
+    let bbb = $(`#des${i}`);
+    bbb.on("click", () => {
+      console.log("hi every body");
+     /*  bbb.show();
+      l1.hide();
+      p1.hide();
+      l2.hide();
+      p2.hide();
+      l3.hide();
+      p3.hide();
+      bbb.show();
+      p4.show(); */
+    });
   }
 }
 // selecting the elements with the `listItem` class
@@ -214,6 +231,18 @@ home.on("click", () => {
   p2.show();
   l3.show();
   p3.show();
+  l4.show();
+  p4.show();
+});
+
+let bbb = $("#des${i}");
+bbb.on("click", (i) => {
+  l1.hide();
+  p1.hide();
+  l2.hide();
+  p2.hide();
+  l3.hide();
+  p3.hide();
   l4.show();
   p4.show();
 });
