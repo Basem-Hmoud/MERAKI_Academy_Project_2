@@ -92,6 +92,13 @@ const l2 = $("#l2"); //لاظهار محتويات التلفونات
 const l3 = $("#l3"); //لاظهار محتويات اكسسوارات اللاب توب
 const l4 = $("#l4"); //لاظهار محتويات افلام
 
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i].type === "laptop") {
+    l1.append(`<h2>${arr[i].name}</h2>
+    <img src="${arr[i].img}"/>`);
+  }
+}
+
 //for loop in arr
 //arr
 //for(let i =0;i<arr.length,i++){
