@@ -92,38 +92,70 @@ const l2 = $("#l2"); //لاظهار محتويات التلفونات
 const l3 = $("#l3"); //لاظهار محتويات اكسسوارات اللاب توب
 const l4 = $("#l4"); //لاظهار محتويات افلام
 
+// view all content in laptop
 for (let i = 0; i < arr.length; i++) {
+  //return all obj type laptop name + img
   if (arr[i].type === "laptop") {
     l1.append(`<h2>${arr[i].name}</h2>
     <img src="${arr[i].img}"/>`);
   }
 }
+// view all content in phone
 for (let i = 0; i < arr.length; i++) {
+  //return all obj type phone name + img
   if (arr[i].type === "phone") {
     l2.append(`<h2>${arr[i].name}</h2>
     <img src="${arr[i].img}"/>`);
   }
 }
-
+// view all content in Accessories laptop
 for (let i = 0; i < arr.length; i++) {
+  //return all obj type Accessories laptop name + img
   if (arr[i].type === "Accessories laptop") {
     l3.append(`<h2>${arr[i].name}</h2>
     <img src="${arr[i].img}"/>`);
   }
 }
+// view all content in movie
 for (let i = 0; i < arr.length; i++) {
+  //return all obj type movie laptop name + img
   if (arr[i].type === "movie") {
     l4.append(`<h2>${arr[i].name}</h2>
     <img src="${arr[i].img}"/>`);
   }
 }
-//for loop in arr
-//arr
-//for(let i =0;i<arr.length,i++){
-// dynamic add name and img in arr{
-//using append to view content obj body.append(paragraph)
-//}
+// selecting the elements with the `listItem` class
+const lap1 = $("#lap1");
 
+// it is possible to use the `on` method to attach event listeners on elements
+// the code below will attach the click event on every selected element
+/*lap1.on("click", () => {
+  for (let i = 0; i < arr.length; i++) {
+    //return all obj type laptop name + img
+    if (arr[i].type === "laptop") {
+      l1.append(`<h2>${arr[i].name}</h2>
+      <img src="${arr[i].img}"/>`);
+    }
+  }
+});
+
+*/
+
+lap1.on("click", () => {
+  l1.show();
+  l2.hide();
+  l3.hide();
+  l4.hide();
+});
+
+
+const content = $(".content");
+content.css({
+  "font-size": "50px",
+  color: "red",
+  display: "flex",
+  "flex-wrap": "wrap",
+});
 //show / hide
 //the first show tosipa and hide php using onclick=click
 // on hover change the color to red
