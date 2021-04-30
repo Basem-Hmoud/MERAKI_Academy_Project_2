@@ -5,21 +5,25 @@ const arr = [
   {
     name: "toshipa",
     img: "./images/toshipa.png",
+    price: "200JD",
     type: "laptop",
   },
   {
     name: "php",
     img: "./images/php.jpg",
+    price: "200JD",
     type: "laptop",
   },
   {
     name: "acer",
     img: "./images/acer.jpg",
+    price: "200JD",
     type: "laptop",
   },
   {
     name: "Dell",
     img: "./images/dell.jpg",
+    price: "200JD",
     type: "laptop",
   },
   /////////////////////////////
@@ -97,7 +101,8 @@ for (let i = 0; i < arr.length; i++) {
   //return all obj type laptop name + img
   if (arr[i].type === "laptop") {
     l1.append(`<h2>${arr[i].name}</h2>
-    <img src="${arr[i].img}"/>`);
+    <img src="${arr[i].img}"/>
+    <h4>${arr[i].price}</h4>`);
   }
 }
 // view all content in phone
