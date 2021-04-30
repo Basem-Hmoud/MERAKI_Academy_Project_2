@@ -129,43 +129,41 @@ const lap1 = $("#lap1");
 const pho1 = $("#pho1");
 const AccLab = $("#AccLab");
 const mov = $("#mov");
-// it is possible to use the `on` method to attach event listeners on elements
-// the code below will attach the click event on every selected element
-/*lap1.on("click", () => {
-  for (let i = 0; i < arr.length; i++) {
-    //return all obj type laptop name + img
-    if (arr[i].type === "laptop") {
-      l1.append(`<h2>${arr[i].name}</h2>
-      <img src="${arr[i].img}"/>`);
-    }
-  }
-});
-
-*/
-
+const home = $("#home");
+// if click in lap1 show all content laptope and Hide the rest of the sections
 lap1.on("click", () => {
   l1.show();
   l2.hide();
   l3.hide();
   l4.hide();
 });
+// if click in phone show all content phone and Hide the rest of the sections
 pho1.on("click", () => {
   l2.show();
   l1.hide();
   l3.hide();
   l4.hide();
 });
+// if click in Accessories laptop show all content Accessories laptop and Hide the rest of the sections
 AccLab.on("click", () => {
   l3.show();
   l1.hide();
   l2.hide();
   l4.hide();
 });
+// if click in movie show all content movie and Hide the rest of the sections
 mov.on("click", () => {
   l4.show();
   l1.hide();
   l2.hide();
   l3.hide();
+});
+// if click in home show all department
+home.on("click", () => {
+  l1.show();
+  l2.show();
+  l3.show();
+  l4.show();
 });
 const content = $(".content");
 content.css({
