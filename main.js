@@ -81,6 +81,7 @@ const arr = [
     name: "Godzilla: King Of The Monsters",
     price: "200JD",
     img: "./images/Godzilla King Of The Monsters.jpg",
+    description: "The film follows the relentless efforts of a secret animal society (Monarch) when it encounters a group of huge monsters, including the formidable dinosaur Godzilla, who confronts the humanoid three-headed King Gadrawy, leaving humanity with an unknown fate.",
     type: "movie",
   },
   {
@@ -107,6 +108,7 @@ const l1 = $("#l1"); //لا ظهار محتويات اللاب توب
 const l2 = $("#l2"); //لاظهار محتويات التلفونات
 const l3 = $("#l3"); //لاظهار محتويات اكسسوارات اللاب توب
 const l4 = $("#l4"); //لاظهار محتويات افلام
+const l5 = $("#l5"); 
 
 const p1 = $("#p1"); //لا ظهار محتويات اللاب توب
 const p2 = $("#p2"); //لاظهار محتويات التلفونات
@@ -120,7 +122,7 @@ for (let i = 0; i < arr.length; i++) {
     <img src="${arr[i].img}"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
-    <button> details</button>
+    <button id="des${i}"> details</button>
     </div>`);
   }
 }
@@ -132,7 +134,7 @@ for (let i = 0; i < arr.length; i++) {
     <img src="${arr[i].img}"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
-    <button> details</button>
+    <button id="des${i}"> details</button>
     </div>`);
   }
 }
@@ -144,7 +146,7 @@ for (let i = 0; i < arr.length; i++) {
     <img src="${arr[i].img}"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
-    <button> details</button>
+    <button id="des${i}"> details</button>
     </div>`);
   }
 }
@@ -158,18 +160,28 @@ for (let i = 0; i < arr.length; i++) {
     <button> add to card</button>
     <button id="des${i}"> details</button>
     </div>`);
-    let bbb = $(`#des${i}`);
-    bbb.on("click", () => {
-      console.log("hi every body");
-     /*  bbb.show();
-      l1.hide();
-      p1.hide();
-      l2.hide();
-      p2.hide();
-      l3.hide();
-      p3.hide();
-      bbb.show();
-      p4.show(); */
+
+    let cont=$(".content");
+    let detail = $(`#des${i}`);
+    detail.on("click", () => {
+    console.log("hi every body");
+   
+    //l5.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>`)
+    l5.append(`
+    <div><img src="${arr[i].img}"/></div>
+    <div style="color: orange;"><h2>${arr[i].name}</h2>
+    <h4>${arr[i].price}</h4>
+    <button> add to card</button>
+    </div>`)
+    l1.hide();
+    p1.hide();
+    l2.hide();
+    p2.hide();
+    l3.hide();
+    p3.hide();
+    l4.hide();
+    p4.hide();
+    l5.show()
     });
   }
 }
@@ -189,6 +201,7 @@ lap1.on("click", () => {
   p3.hide();
   l4.hide();
   p4.hide();
+  l5.hide();
 });
 // if click in phone show all content phone and Hide the rest of the sections
 pho1.on("click", () => {
@@ -200,6 +213,7 @@ pho1.on("click", () => {
   p3.hide();
   l4.hide();
   p4.hide();
+  l5.hide();
 });
 // if click in Accessories laptop show all content Accessories laptop and Hide the rest of the sections
 AccLab.on("click", () => {
@@ -211,6 +225,7 @@ AccLab.on("click", () => {
   p2.hide();
   l4.hide();
   p4.hide();
+  l5.hide();
 });
 // if click in movie show all content movie and Hide the rest of the sections
 mov.on("click", () => {
@@ -222,6 +237,7 @@ mov.on("click", () => {
   p2.hide();
   l3.hide();
   p3.hide();
+  l5.hide();
 });
 // if click in home show all department
 home.on("click", () => {
@@ -233,16 +249,7 @@ home.on("click", () => {
   p3.show();
   l4.show();
   p4.show();
+  l5.hide()
 });
 
-let bbb = $("#des${i}");
-bbb.on("click", (i) => {
-  l1.hide();
-  p1.hide();
-  l2.hide();
-  p2.hide();
-  l3.hide();
-  p3.hide();
-  l4.show();
-  p4.show();
-});
+
