@@ -128,6 +128,7 @@ for (let i = 0; i < arr.length; i++) {
 const lap1 = $("#lap1");
 const pho1 = $("#pho1");
 const AccLab = $("#AccLab");
+const mov = $("#mov");
 // it is possible to use the `on` method to attach event listeners on elements
 // the code below will attach the click event on every selected element
 /*lap1.on("click", () => {
@@ -159,6 +160,12 @@ AccLab.on("click", () => {
   l1.hide();
   l2.hide();
   l4.hide();
+});
+mov.on("click", () => {
+  l4.show();
+  l1.hide();
+  l2.hide();
+  l3.hide();
 });
 const content = $(".content");
 content.css({
