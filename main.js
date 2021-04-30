@@ -22,27 +22,69 @@ const arr = [
     img: "./dell.jpg",
     type: "laptop",
   },
-    /////////////////////////////
-    {
-      name: "samsung",
-      img: "./samsungPhone",
-      type: "phone",
-    },
-    {
-      name: "iphone",
-      img: "./iphone",
-      type: "phone",
-    },
-    {
-      name: "Huawei",
-      img: "./huawei",
-      type: "phone",
-    },
-    {
-      name: "oppo",
-      img: "./oppo",
-      type: "phone",
-    },
+  /////////////////////////////
+  {
+    name: "samsung",
+    img: "./samsungPhone",
+    type: "phone",
+  },
+  {
+    name: "iphone",
+    img: "./iphone",
+    type: "phone",
+  },
+  {
+    name: "Huawei",
+    img: "./huawei",
+    type: "phone",
+  },
+  {
+    name: "oppo",
+    img: "./oppo",
+    type: "phone",
+  },
+  /////////////////////////////
+  {
+    name: "mouse",
+    img: "./mouse",
+    type: "Accessories laptop",
+  },
+  {
+    name: "hard disk",
+    img: "./hard disk",
+    type: "Accessories laptop",
+  },
+  {
+    name: "keyboard",
+    img: "./keyboard",
+    type: "Accessories laptop",
+  },
+  {
+    name: "headphones",
+    img: "./headphones",
+    type: "Accessories laptop",
+  },
+  /////////////////////////////
+  {
+    name: "Godzilla: King Of The Monsters",
+    img: "./Godzilla King Of The Monsters",
+    type: "movie",
+  },
+  {
+    name: "Knives Out",
+    img: "./Knives Out",
+    type: "movie",
+  },
+  {
+    name: "Bad Boys For Life",
+    img: "./Bad Boys For Life",
+    type: "movie",
+  },
+  {
+    name: "Wolves",
+    img: "./Wolves",
+    type: "movie",
+  },
 ];
 
 const l1 = $("#l1");
