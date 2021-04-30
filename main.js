@@ -22,6 +22,27 @@ const arr = [
     img: "./dell.jpg",
     type: "laptop",
   },
+    /////////////////////////////
+    {
+      name: "samsung",
+      img: "./samsungPhone",
+      type: "phone",
+    },
+    {
+      name: "iphone",
+      img: "./iphone",
+      type: "phone",
+    },
+    {
+      name: "Huawei",
+      img: "./huawei",
+      type: "phone",
+    },
+    {
+      name: "oppo",
+      img: "./oppo",
+      type: "phone",
+    },
 ];
 
 const l1 = $("#l1");
