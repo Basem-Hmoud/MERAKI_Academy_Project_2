@@ -67,28 +67,34 @@ const arr = [
   /////////////////////////////
   {
     name: "Godzilla: King Of The Monsters",
-    img: "./Godzilla King Of The Monsters",
+    img: "./images/Godzilla King Of The Monsters.jpg",
     type: "movie",
   },
   {
     name: "Knives Out",
-    img: "./Knives Out",
+    img: "./images/Knives Out.png",
     type: "movie",
   },
   {
     name: "Bad Boys For Life",
-    img: "./Bad Boys For Life",
+    img: "./images/Bad Boys For Life.jpg",
     type: "movie",
   },
   {
     name: "Wolves",
-    img: "./Wolves",
+    img: "./images/Wolves.png",
     type: "movie",
   },
 ];
 
-const l1 = $("#l1");
-const l2 = $("#l2");
+const l1 = $("#l1");//لا ظهار محتويات اللاب توب
+const l2 = $("#l2");//لاظهار محتويات التلفونات
+const l3 = $("#l3");//لاظهار محتويات اكسسوارات اللاب توب
+const l4 = $("#l4");//لاظهار محتويات افلام
+
+
+
+
 
 //for loop in arr
 //arr
@@ -101,7 +107,6 @@ const l2 = $("#l2");
 //the first show tosipa and hide php using onclick=click
 // on hover change the color to red
 /*
-
 
 //replace mouseover > click
 listItems.on("mouseover", function () {
