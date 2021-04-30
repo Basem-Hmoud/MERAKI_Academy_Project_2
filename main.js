@@ -98,6 +98,12 @@ for (let i = 0; i < arr.length; i++) {
     <img src="${arr[i].img}"/>`);
   }
 }
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i].type === "phone") {
+    l2.append(`<h2>${arr[i].name}</h2>
+    <img src="${arr[i].img}"/>`);
+  }
+}
 
 //for loop in arr
 //arr
