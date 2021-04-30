@@ -139,8 +139,31 @@ for (let i = 0; i < arr.length; i++) {
     <img src="${arr[i].img}"/>
     <h4>${arr[i].price}</h4>
     <button> add to card</button>
-    <button id="des${i}"> details</button>
+    <button id="deslaptop${i}"> details</button>
     </div>`);
+    let detaillaptop = $(`#deslaptop${i}`);
+    detaillaptop.on("click", () => {
+   
+
+    //l5.append(`<div style="color: orange;"><h2>${arr[i].name}</h2>`)
+    l5.append(`
+    <div><img src="${arr[i].img}"/></div>
+    <div style="color: orange;"><h2>${arr[i].name}</h2>
+    <h4>${arr[i].price}</h4>
+    <h3>${arr[i].description}</h3>
+    <button> add to card</button>
+    </div>`);
+
+      l1.hide();
+      p1.hide();
+      l2.hide();
+      p2.hide();
+      l3.hide();
+      p3.hide();
+      l4.hide();
+      p4.hide();
+      l5.show();
+    });
   }
 }
 // view all content in phone
