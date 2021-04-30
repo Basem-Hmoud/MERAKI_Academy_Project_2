@@ -53,18 +53,19 @@ li:hover{
   display: flex;
   flex-wrap: wrap;
   row-gap: inherit;
-  gap: 20px;
+  gap: 40px;
   border: solid black 2px;
   background-color: blueviolet;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: 400px;
   width: 100%;
-  margin-top: 20px;
+  padding-top: 30px;
+  text-align: center;
 }
 img {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 300px;
 }
 p {
   font-size: 20px;
