@@ -165,23 +165,3 @@ home.on("click", () => {
   l3.show();
   l4.show();
 });
-const content = $(".content");
-content.css({
-  "font-size": "50px",
-  color: "red",
-  display: "flex",
-  "flex-wrap": "wrap",
-});
-//show / hide
-//the first show tosipa and hide php using onclick=click
-// on hover change the color to red
-/*
-
-//replace mouseover > click
-listItems.on("mouseover", function () {
-  // $(this) refers to the element it self, to have the correct reference use ES5
-  $(this).css("color", "red");
-  console.log("color has been changed");
-});*/
-//.show() header.show();
-//.hide() header.hide();

@@ -9,7 +9,7 @@
   margin-top: 20px;
   display: flex;
   border: solid 1px black;
-  padding-left: 20px;
+  padding-left: 560px;
   width: 100%;
   gap: 30px;
   flex-wrap: wrap;
@@ -19,7 +19,7 @@ a {
   text-decoration: none;
   color: black;
 }
-.fotter {
+#fotter {
   display: grid;
   border: solid black 2px;
   color: blue;
@@ -29,4 +29,42 @@ a {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  cursor: pointer;
+  border: solid black 2px;
+
+  padding: 10px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: inherit;
+  gap: 20px;
+  border: solid black 2px;
+  background-color: blueviolet;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 27px;
 }
