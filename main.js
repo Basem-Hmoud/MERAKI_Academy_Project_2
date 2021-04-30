@@ -4,64 +4,64 @@
 const arr = [
   {
     name: "toshipa",
-    img: "./toshipa.png",
+    img: "./images/toshipa.png",
     type: "laptop",
   },
   {
     name: "php",
-    img: "./php.jpg",
+    img: "./images/php.jpg",
     type: "laptop",
   },
   {
     name: "acer",
-    img: "./acer.jpg",
+    img: "./images/acer.jpg",
     type: "laptop",
   },
   {
     name: "Dell",
-    img: "./dell.jpg",
+    img: "./images/dell.jpg",
     type: "laptop",
   },
   /////////////////////////////
   {
     name: "samsung",
-    img: "./samsungPhone",
+    img: "./images/samsungPhone.jpg",
     type: "phone",
   },
   {
     name: "iphone",
-    img: "./iphone",
+    img: "./images/iphone.jpg",
     type: "phone",
   },
   {
     name: "Huawei",
-    img: "./huawei",
+    img: "./images/huawei.jpg",
     type: "phone",
   },
   {
     name: "oppo",
-    img: "./oppo",
+    img: "./images/oppo.jpg",
     type: "phone",
   },
   /////////////////////////////
   {
     name: "mouse",
-    img: "./mouse",
+    img: "./images/mouse.jpg",
     type: "Accessories laptop",
   },
   {
     name: "hard disk",
-    img: "./hard disk",
+    img: "./images/harddisk.jpg",
     type: "Accessories laptop",
   },
   {
     name: "keyboard",
-    img: "./keyboard",
+    img: "./images/keyboard.jpg",
     type: "Accessories laptop",
   },
   {
     name: "headphones",
-    img: "./headphones",
+    img: "./images/headphones.jpg",
     type: "Accessories laptop",
   },
   /////////////////////////////
@@ -87,14 +87,10 @@ const arr = [
   },
 ];
 
-const l1 = $("#l1");//لا ظهار محتويات اللاب توب
-const l2 = $("#l2");//لاظهار محتويات التلفونات
-const l3 = $("#l3");//لاظهار محتويات اكسسوارات اللاب توب
-const l4 = $("#l4");//لاظهار محتويات افلام
-
-
-
-
+const l1 = $("#l1"); //لا ظهار محتويات اللاب توب
+const l2 = $("#l2"); //لاظهار محتويات التلفونات
+const l3 = $("#l3"); //لاظهار محتويات اكسسوارات اللاب توب
+const l4 = $("#l4"); //لاظهار محتويات افلام
 
 //for loop in arr
 //arr
