@@ -6,7 +6,7 @@
 }
 .header {
   font-size: 20px;
-  margin-top: 20px;
+ 
   display: flex;
   border: none black;
   padding-left: 50px;
@@ -17,6 +17,7 @@
   justify-content: center;
   align-items: center;
   color: gray;
+  background-color: white;
 }
 li {
   cursor: pointer;
@@ -48,7 +49,7 @@ li:hover {
   justify-content: center;
   align-items: center;
 }
-.tab {
+.section {
   display: flex;
   flex-wrap: wrap;
   row-gap: inherit;
@@ -83,6 +84,10 @@ button {
   border-style: none;
   background-color: #ddd;
   cursor: pointer;
+}
+.mainPage{
+  background-color: #ddd;
+
 }
 .as {
   width: 50%;
