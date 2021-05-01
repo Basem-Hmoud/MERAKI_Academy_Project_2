@@ -4,7 +4,6 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
 .header {
   font-size: 20px;
   margin-top: 20px;
@@ -27,15 +26,15 @@ li:hover {
 }
 #fotter {
   display: grid;
-  border: solid black 2px;
+  border-style: none;
   color: black;
-  height: 40px;
+  height: 50px;
   width: 100%;
   margin-top: 20px;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  background-color: brown;
+  background-color: #ddd;
 }
 .content {
   display: flex;
@@ -74,25 +73,21 @@ p {
   margin-top: 25px;
   margin-bottom: 27px;
 }
-.med {
-  width: 100%;
-}
-@media (max-width: 700px) {
-  .med {
-    width: 100px;
-  }
-}
 
 button {
   color: black;
- /* background-color: #ddd;
-  */height: 50px;
+  /* background-color: #ddd;
+  */
+  height: 50px;
   width: 80px;
   border-style: none;
   background-color: #ddd;
   cursor: pointer;
 }
-.as{
+.as {
   width: 50%;
   text-align: left;
+}
+@media all and (max-width: 100%) {
+
 }
