@@ -3,9 +3,8 @@
 
 const arr = [
   {
-
     //////////////////////////////laptop
-    name: "toshipa core i3",
+    name: "toshipa",
     img: "./images/toshipa.png",
     description:
       "Hyundai Thinnote-A, 14.1Celeron Laptop, 4GB RAM, 64GB Storage, Expandable 2.5 SATA HDD Slot, Windows 10 Home S Mode, English - Black",
@@ -15,7 +14,7 @@ const arr = [
   },
   {
     name: "hp",
-    img: "./images/hp core i3.jpg",
+    img: "./images/hp core i3.png",
     description:
       "2021 HP 14 HD Thin and Light Laptop, Intel Core i3-1005G1 Processor, 4GB SDRAM RAM 128GB SSD, HDMI, Webcam, 802.11b/g/n/ac, Bluetooth, Windows 10 S, Silver, W/ IFT Accessories",
     price: "419 $",
@@ -24,7 +23,7 @@ const arr = [
   },
   {
     name: "acer",
-    img: "./images/acer core i3.jpg",
+    img: "./images/acer core i3.png",
     description:
       "Acer Aspire 5 A515-56-36UT | 15.6 Full HD Display | 11th Gen Intel Core i3-1115G4 Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | Amazon Alexa | Windows 10 Home (S Mode)",
     price: "350 $",
@@ -33,17 +32,17 @@ const arr = [
   },
   {
     name: "Dell",
-    img: "./images/Dell core i3.jpg",
+    img: "./images/Dell core i3.png",
     description:
       "DELL 2021 Newest inspiron 15 3000 PC Laptop, 15.6 HD Anti-Glare Non-Touch Display, Intel 2-Core 4205U Processor, 8GB RAM, 128GB PCIe SSD, Webcam, Bluetooth, Win 10",
     price: "439 $",
     rank: "",
     type: "laptop",
   },
-      //////////////////////////////phone
+  //////////////////////////////phone
   {
     name: "Samsung Galaxy S21 5G",
-    img: "./images/Samsung Galaxy S21 5G.jpg",
+    img: "./images/Samsung Galaxy S21 5G.png",
     description:
       "Samsung Galaxy S21 5G | Factory Unlocked Android Cell Phone | US Version 5G Smartphone | Pro-Grade Camera, 8K Video, 64MP High Res | 128GB, Phantom Violet (SM-G991UZVAXAA)",
     price: "700 $",
@@ -52,7 +51,7 @@ const arr = [
   },
   {
     name: "iPhone 7 Plus",
-    img: "./images/iPhone 7 Plus.jpg",
+    img: "./images/iPhone 7 Plus.png",
     description: "Apple iPhone 7 Plus, 128GB, Black - Fully Unlocked (Renewed)",
     price: "258 $",
     rank: "",
@@ -60,7 +59,7 @@ const arr = [
   },
   {
     name: "HUAWEI Nova 5T",
-    img: "./images/huawei.jpg",
+    img: "./images/huawei.png",
     description:
       "HUAWEI Nova 5T (128GB, 6GB) 6.26 LCD, Kirin 980, 48MP Quad Camera, 22.5W Fast Charge, Dual SIM GSM Unlocked Global 4G LTE International EU Plug with US Adapter (Black)",
     price: "324 $",
@@ -69,17 +68,17 @@ const arr = [
   },
   {
     name: "Oppo Reno 5 Pro",
-    img: "./images/oppo.jpg",
+    img: "./images/oppo.png",
     description:
       "Oppo Reno 5 Pro 5G CPH2201 256GB 12GB RAM International Version - Galactic Silver",
     price: "630 $",
     rank: "",
     type: "phone",
   },
-        //////////////////////////////Accessories laptop
+  //////////////////////////////Accessories laptop
   {
     name: "mouse",
-    img: "./images/mouse.jpg",
+    img: "./images/mouse.png",
     description:
       "Wireless Mouse, RATEL 2.4G Wireless Ergonomic Mouse Computer Mouse Laptop Mouse USB Mouse 6 Buttons with Nano Receiver 3 Adjustable DPI Levels Cordless Wireless Mice for Windows, Mac",
     price: "10 $",
@@ -88,7 +87,7 @@ const arr = [
   },
   {
     name: "hard disk",
-    img: "./images/harddisk.jpg",
+    img: "./images/harddisk.png",
     description:
       "Toshiba (HDTB410XK3AA) Canvio Basics 1TB Portable External Hard Drive USB 3.0, Black",
     price: "45 $",
@@ -97,7 +96,7 @@ const arr = [
   },
   {
     name: "keyboard",
-    img: "./images/keyboard.jpg",
+    img: "./images/keyboard.png",
     description: "Logitech G213 Prodigy Gaming Keyboard",
     price: "20 $",
     rank: "",
@@ -105,14 +104,14 @@ const arr = [
   },
   {
     name: "headphones",
-    img: "./images/headphones.jpg",
+    img: "./images/headphones.png",
     description:
       "COWIN E7 Active Noise Cancelling Headphones Bluetooth Headphones with Microphone Deep Bass Wireless Headphones Over Ear, Comfortable Protein Earpads, 30 Hours Playtime for Travel/Work, Black",
     price: "50 $",
     rank: "",
     type: "Accessories laptop",
   },
-          //////////////////////////////movie
+  //////////////////////////////movie
   {
     name: "Godzilla: King Of The Monsters",
     img: "./images/Godzilla King Of The Monsters.jpg",
@@ -155,7 +154,7 @@ const l1 = $("#l1"); //لا ظهار محتويات اللاب توب
 const l2 = $("#l2"); //لاظهار محتويات التلفونات
 const l3 = $("#l3"); //لاظهار محتويات اكسسوارات اللاب توب
 const l4 = $("#l4"); //لاظهار محتويات افلام
-const l5 = $("#l5");//لاطهار عنصر واحد عند الضغط على زر التفاصيل
+const l5 = $("#l5"); //لاطهار عنصر واحد عند الضغط على زر التفاصيل
 
 const p1 = $("#p1"); //لا ظهار محتويات اللاب توب
 const p2 = $("#p2"); //لاظهار محتويات التلفونات
@@ -165,21 +164,24 @@ const p4 = $("#p4"); //لاظهار محتويات افلام
 for (let i = 0; i < arr.length; i++) {
   //return all obj type laptop name + img
   if (arr[i].type === "laptop") {
-    l1.append(`<div class="as"><h2>${arr[i].name}</h2>
-    <img src="${arr[i].img}"/>
-    <h4>${arr[i].price}</h4>
+    l1.append(`
+    <div>
+    <h2>${arr[i].name}</h2><br/>
+    <img src="${arr[i].img}"/><br/><br/>
+    <h4>${arr[i].price}</h4><br/>
     <button class="buy"> add to card</button>
     <button id="deslaptop${i}"> details</button>
     </div>`);
     let detaillaptop = $(`#deslaptop${i}`);
     detaillaptop.on("click", () => {
-      //to view 1 items
-      l5.append(`
+    //to view 1 items
+    l5.append(`
     <div><img src="${arr[i].img}"/></div>
-    <div style="color: orange;"><h2>${arr[i].name}</h2>
-    <h3>${arr[i].description}</h3>
-    <h4>${arr[i].price}</h4>
-    <button> add to card</button>
+    <div class="as">
+    <h2>${arr[i].name}</h2><br/>
+    <h3>${arr[i].description}</h3><br/>
+    <h4>${arr[i].price}</h4><br/>
+    <button class="buy"> add to card</button>
     </div>`);
 
       l1.hide();
@@ -198,21 +200,25 @@ for (let i = 0; i < arr.length; i++) {
 for (let i = 0; i < arr.length; i++) {
   //return all obj type phone name + img
   if (arr[i].type === "phone") {
-    l2.append(`<div ><h2>${arr[i].name}</h2>
-    <img src="${arr[i].img}" style= "height:300px ;"/>
-    <h4>${arr[i].price}</h4>
+    l2.append(`
+    <div>
+    <h2>${arr[i].name}</h2><br/>
+    <img src="${arr[i].img}" style= "height:300px ;"/><br/><br/>
+    <h4>${arr[i].price}</h4><br/>
     <button class="buy"> add to card</button>
     <button id="desPhone${i}"> details</button>
     </div>`);
     let detailPhone = $(`#desPhone${i}`);
     detailPhone.on("click", () => {
-      //to view 1 items
-      l5.append(`
-    <div><img src="${arr[i].img}"/></div>
-    <div style="color: orange;"><h2>${arr[i].name}</h2>
-    <h3>${arr[i].description}</h3>
-    <h4>${arr[i].price}</h4>
-    <button> add to card</button>
+    //to view 1 items
+    l5.append(`
+    <div>
+    <img src="${arr[i].img}"/></div>
+    <div class="as">
+    <h2>${arr[i].name}</h2><br/>
+    <h3>${arr[i].description}</h3><br/>
+    <h4>${arr[i].price}</h4><br/>
+    <button class="buy"> add to card</button>
     </div>`);
 
       l1.hide();
@@ -231,21 +237,25 @@ for (let i = 0; i < arr.length; i++) {
 for (let i = 0; i < arr.length; i++) {
   //return all obj type Accessories laptop name + img
   if (arr[i].type === "Accessories laptop") {
-    l3.append(`<div><h2>${arr[i].name}</h2>
-    <img src="${arr[i].img}" style= "height:300px ;"/>
-    <h4>${arr[i].price}</h4>
+    l3.append(`
+    <div>
+    <h2>${arr[i].name}</h2><br/>
+    <img src="${arr[i].img}" style= "height:300px ;width:300px;"/><br/><br/>
+    <h4>${arr[i].price}</h4><br/>
     <button class="buy"> add to card</button>
     <button id="desAcc${i}"> details</button>
     </div>`);
     let detailAcc = $(`#desAcc${i}`);
     detailAcc.on("click", () => {
-      //to view 1 items
-      l5.append(`
-    <div><img src="${arr[i].img}"/></div>
-    <div style="color: orange;"><h2>${arr[i].name}</h2>
-    <h3>${arr[i].description}</h3>
-    <h4>${arr[i].price}</h4>
-    <button> add to card</button>
+    //to view 1 items
+    l5.append(`
+    <div>
+    <img src="${arr[i].img}"/></div>
+    <div class="as">
+    <h2>${arr[i].name}</h2><br/>
+    <h3>${arr[i].description}</h3><br/>
+    <h4>${arr[i].price}</h4><br/>
+    <button class="buy"> add to card</button>
     </div>`);
 
       l1.hide();
@@ -264,9 +274,11 @@ for (let i = 0; i < arr.length; i++) {
 for (let i = 0; i < arr.length; i++) {
   //return all obj type movie laptop name + img
   if (arr[i].type === "movie") {
-    l4.append(`<div style="color: orange;padding-bottom: 50px;"><h2>${arr[i].name}</h2>
-    <img src="${arr[i].img}"/>
-    <h4>${arr[i].price}</h4>
+    l4.append(`
+    <div style="padding-bottom: 50px;">
+    <h2>${arr[i].name}</h2><br/>
+    <img src="${arr[i].img}"/><br/><br/>
+    <h4>${arr[i].price}</h4><br/>
     <button class="buy"> add to card</button>
     <button id="desMov${i}"> details</button>
     </div>`);
@@ -277,11 +289,13 @@ for (let i = 0; i < arr.length; i++) {
 
       //to view 1 items
       l5.append(`
-    <div><img src="${arr[i].img}"/></div>
-    <div style="color: orange;"><h2>${arr[i].name}</h2>
-    <h3>${arr[i].description}</h3>
-    <h4>${arr[i].price}</h4>
-    <button> add to card</button>
+    <div>
+    <img src="${arr[i].img}"/></div>
+    <div class="as">
+    <h2>${arr[i].name}</h2><br/>
+    <h3>${arr[i].description}</h3><br/>
+    <h4>${arr[i].price}</h4><br/>
+    <button class="buy"> add to card</button>
     </div>`);
 
       l1.hide();
@@ -369,7 +383,7 @@ home.on("click", () => {
   l5.html("");
 });
 //if click on add to card and show alert
-const card=$(".buy");
+const card = $(".buy");
 card.on("click", () => {
   alert("thank you for buying");
 });

@@ -17,25 +17,25 @@
   height: 50px;
   justify-content: center;
   align-items: center;
- color: gray;
+  color: gray;
 }
-li{
+li {
   cursor: pointer;
 }
-li:hover{
+li:hover {
   color: red;
 }
 #fotter {
   display: grid;
   border: solid black 2px;
-  color:black;
+  color: black;
   height: 40px;
   width: 100%;
   margin-top: 20px;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  background-color: brown
+  background-color: brown;
 }
 .content {
   display: flex;
@@ -44,36 +44,55 @@ li:hover{
   cursor: pointer;
   border-style: none;
   background-color: #ddd;
-
   padding: 10px;
   margin-top: 40px;
   justify-content: center;
   align-items: center;
- /* background-color: #F5F5F5;
-*/}
+}
 .tab {
   display: flex;
   flex-wrap: wrap;
   row-gap: inherit;
   gap: 40px;
   border-style: none;
-   background-color: #ddd; 
+  background-color: #ddd;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 430px;
   width: 100%;
-  /*padding-top: 30px;
-  */text-align: center;
- 
+  text-align: center;
+  margin-bottom: 40px;
 }
 img {
   height: 230px;
   width: 300px;
 }
 p {
-  color:#D16E25;
+  color: #d16e25;
   font-size: 20px;
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 27px;
+}
+.med {
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .med {
+    width: 100px;
+  }
+}
+
+button {
+  color: black;
+ /* background-color: #ddd;
+  */height: 50px;
+  width: 80px;
+  border-style: none;
+  background-color: #ddd;
+  cursor: pointer;
+}
+.as{
+  width: 50%;
+  text-align: left;
 }
