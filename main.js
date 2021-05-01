@@ -165,10 +165,10 @@ for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type laptop name + img
   if (arrayItems[i].type === "laptop") {
     section1.append(`
-    <div>
+    <div style="border-style: solid ;border-width: 1px;">
     <h2>${arrayItems[i].name}</h2><br/>
     <img src="${arrayItems[i].img}"/><br/><br/>
-    <h4>${arrayItems[i].price}</h4><br/>
+    <h2>${arrayItems[i].price}</h2><br/>
     <button class="buy"> add to card</button>
     <button id="deslaptop${i}"> details</button>
     </div>`);
@@ -176,13 +176,18 @@ for (let i = 0; i < arrayItems.length; i++) {
     detaillaptop.on("click", () => {
       //to view 1 items
       section5.append(`
-    <div><img src="${arrayItems[i].img}"style= "width: auto;"/></div>
+    <div><img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h3>${arrayItems[i].description}</h3><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <button class="buy"> add to card</button>
+    <button class="buylaptop" style= "margin-left:0px;"> add to card</button>
     </div>`);
+
+      const viewOneItem = $(".buylaptop");
+      viewOneItem.on("click", () => {
+        alert("thank you for buying");
+      });
 
       section1.hide();
       paragraph1.hide();
@@ -196,15 +201,16 @@ for (let i = 0; i < arrayItems.length; i++) {
     });
   }
 }
+
 // view all content in phone
 for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type phone name + img
   if (arrayItems[i].type === "phone") {
     section2.append(`
-    <div>
+    <div style="border-style: solid ;border-width: 1px;">
     <h2>${arrayItems[i].name}</h2><br/>
     <img src="${arrayItems[i].img}" style= "height:300px ;"/><br/><br/>
-    <h4>${arrayItems[i].price}</h4><br/>
+    <h2>${arrayItems[i].price}</h2><br/>
     <button class="buy"> add to card</button>
     <button id="desPhone${i}"> details</button>
     </div>`);
@@ -213,14 +219,17 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: auto;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h3>${arrayItems[i].description}</h3><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <button class="buy"> add to card</button>
+    <button class="buyPhone"> add to card</button>
     </div>`);
-
+      const viewOneItem = $(".buyPhone");
+      viewOneItem.on("click", () => {
+        alert("thank you for buying");
+      });
       section1.hide();
       paragraph1.hide();
       section2.hide();
@@ -238,10 +247,10 @@ for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type Accessories laptop name + img
   if (arrayItems[i].type === "Accessories laptop") {
     section3.append(`
-    <div>
+    <div style="border-style: solid ;border-width: 1px;">
     <h2>${arrayItems[i].name}</h2><br/>
     <img src="${arrayItems[i].img}" style= "height:300px ;width:300px;"/><br/><br/>
-    <h4>${arrayItems[i].price}</h4><br/>
+    <h2>${arrayItems[i].price}</h2><br/>
     <button class="buy"> add to card</button>
     <button id="desAcc${i}"> details</button>
     </div>`);
@@ -250,14 +259,17 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: auto;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h3>${arrayItems[i].description}</h3><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <button class="buy"> add to card</button>
+    <button class="buyAccessories"> add to card</button>
     </div>`);
-
+      const viewOneItem = $(".buyAccessories");
+      viewOneItem.on("click", () => {
+        alert("thank you for buying");
+      });
       section1.hide();
       paragraph1.hide();
       section2.hide();
@@ -275,10 +287,10 @@ for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type movie laptop name + img
   if (arrayItems[i].type === "movie") {
     section4.append(`
-    <div style="padding-bottom: 50px;">
+    <div style="border-style: solid ;border-width: 1px;">
     <h2>${arrayItems[i].name}</h2><br/>
     <img src="${arrayItems[i].img}"/><br/><br/>
-    <h4>${arrayItems[i].price}</h4><br/>
+    <h2>${arrayItems[i].price}</h2><br/>
     <button class="buy"> add to card</button>
     <button id="desMov${i}"> details</button>
     </div>`);
@@ -290,13 +302,17 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: auto;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h3>${arrayItems[i].description}</h3><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <button class="buy"> add to card</button>
+    <button class="buyMovie"> add to card</button>
     </div>`);
+      const viewOneItem = $(".buyMovie");
+      viewOneItem.on("click", () => {
+        alert("thank you for buying");
+      });
 
       section1.hide();
       paragraph1.hide();

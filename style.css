@@ -31,10 +31,10 @@ li:hover {
   color: black;
   height: 50px;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 50px; 
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: #ddd;
 }
 .content {
@@ -54,7 +54,6 @@ li:hover {
   flex-wrap: wrap;
   row-gap: inherit;
   gap: 40px;
-  border-style: none;
   background-color: #ddd;
   justify-content: center;
   align-items: center;
@@ -69,21 +68,26 @@ img {
 }
 p {
   color: #d16e25;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
-  margin-top: 25px;
-  margin-bottom: 27px;
+ /*  margin-top: 25px;
+  margin-bottom: 27px; */
+margin: 50px;
+
 }
 
 button {
-  color: black;
   /* background-color: #ddd;
   */
+  font-size: 20px;
   height: 50px;
-  width: 80px;
+  width: 120px;
   border-style: none;
-  background-color: #ddd;
+  background-color: rgb(20, 18, 18);
+  color: white;
   cursor: pointer;
+  /* margin-left: 25px; */
+  margin-bottom: 15px;
 }
 .mainPage{
   background-color: #ddd;
@@ -92,6 +96,9 @@ button {
 .as {
   width: 50%;
   text-align: left;
+  margin-left: 25px;
+  padding-left: 20px;
+  font-size: 20px;
 }
 @media all and (max-width: 100%) {
 
