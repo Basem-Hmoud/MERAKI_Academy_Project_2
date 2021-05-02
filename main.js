@@ -149,46 +149,64 @@ const arrayItems = [
     type: "movie",
   },
 ];
+//return price after sum all price product
+const arrBuy = [];
+//function(name,price) and use obj
+const addToBuy = (nameProdecut, priceProduct) => {
+  //let or const add more 1 product
+  console.log(nameProdecut,priceProduct)
+  let product = {};
+  product.name = nameProdecut;
+  product.price = priceProduct;
+  arrBuy.push(product);
+  console.log("hiinfunction")
+  section6.append(`<p>name of product ${nameProdecut}</p><br/><p>price of product ${priceProduct}</p>`)
+  section1.hide();
+      paragraph1.hide();
+      section2.hide();
+      paragraph2.hide();
+      section3.hide();
+      paragraph3.hide();
+      section4.hide();
+      paragraph4.hide();
+      section5.hide();
+      section6.show();
+};
+const section1 = $("#section1"); //show content laptop tab
+const section2 = $("#section2"); //show content phone tab
+const section3 = $("#section3"); //show content Accessiories laptop tab
+const section4 = $("#section4"); //show content Movie tab
+const section5 = $("#section5"); //show content details tab
+const section6 = $("#section6"); // show content add to cart tab
 
-const section1 = $("#section1"); //لا ظهار محتويات اللاب توب
-const section2 = $("#section2"); //لاظهار محتويات التلفونات
-const section3 = $("#section3"); //لاظهار محتويات اكسسوارات اللاب توب
-const section4 = $("#section4"); //لاظهار محتويات افلام
-const section5 = $("#section5"); //لاطهار عنصر واحد عند الضغط على زر التفاصيل
-
-const paragraph1 = $("#paragraph1"); //لا ظهار محتويات اللاب توب
-const paragraph2 = $("#paragraph2"); //لاظهار محتويات التلفونات
-const paragraph3 = $("#paragraph3"); //لاظهار محتويات اكسسوارات اللاب توب
-const paragraph4 = $("#paragraph4"); //لاظهار محتويات افلام
+const paragraph1 = $("#paragraph1"); // show laptop in main page
+const paragraph2 = $("#paragraph2"); // show phone in main page
+const paragraph3 = $("#paragraph3"); // show Accessiories laptop in main page
+const paragraph4 = $("#paragraph4"); // show Movie in main page
 // view all content in laptop
 for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type laptop name + img
   if (arrayItems[i].type === "laptop") {
     section1.append(`
-    <div style="border-style: solid ;border-width: 1px;">
+    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;">
     <h2>${arrayItems[i].name}</h2><br/>
-    <img src="${arrayItems[i].img}"/><br/><br/>
+    <img src="${arrayItems[i].img}"/><br/><br/><hr>
     <h2>${arrayItems[i].price}</h2><br/>
-    <button class="buy"> add to card</button>
+    <button class="buy" onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}')"> add to cart</button>
     <button id="deslaptop${i}"> details</button>
     </div>`);
     let detaillaptop = $(`#deslaptop${i}`);
     detaillaptop.on("click", () => {
       //to view 1 items
       section5.append(`
-    <div><img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;"/></div>
+    <div><img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;border-radius:25px ;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
-    <h3>${arrayItems[i].description}</h3><br/>
+    <h4>${arrayItems[i].description}</h4><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <button class="buylaptop" style= "margin-left:0px;"> add to card</button>
+    <button class="buylaptop" style= "margin-left:0px;" onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}')"> add to cart</button>
     </div>`);
-
-      const viewOneItem = $(".buylaptop");
-      viewOneItem.on("click", () => {
-        alert("thank you for buying");
-      });
-
+      
       section1.hide();
       paragraph1.hide();
       section2.hide();
@@ -200,6 +218,9 @@ for (let i = 0; i < arrayItems.length; i++) {
       section5.show();
     });
   }
+
+
+     
 }
 
 // view all content in phone
@@ -207,11 +228,11 @@ for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type phone name + img
   if (arrayItems[i].type === "phone") {
     section2.append(`
-    <div style="border-style: solid ;border-width: 1px;">
+    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;">
     <h2>${arrayItems[i].name}</h2><br/>
-    <img src="${arrayItems[i].img}" style= "height:300px ;"/><br/><br/>
+    <img src="${arrayItems[i].img}" style= "height:300px ;"/><br/><br/><hr>
     <h2>${arrayItems[i].price}</h2><br/>
-    <button class="buy"> add to card</button>
+    <button class="buy"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}')"> add to cart</button>
     <button id="desPhone${i}"> details</button>
     </div>`);
     let detailPhone = $(`#desPhone${i}`);
@@ -219,17 +240,17 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;border-radius:25px ;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
-    <h3>${arrayItems[i].description}</h3><br/>
+    <h4>${arrayItems[i].description}</h4><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <button class="buyPhone"> add to card</button>
+    <button class="buyPhone"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}')"> add to cart</button>
     </div>`);
-      const viewOneItem = $(".buyPhone");
+      /* const viewOneItem = $(".buyPhone");
       viewOneItem.on("click", () => {
         alert("thank you for buying");
-      });
+      }); */
       section1.hide();
       paragraph1.hide();
       section2.hide();
@@ -247,11 +268,11 @@ for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type Accessories laptop name + img
   if (arrayItems[i].type === "Accessories laptop") {
     section3.append(`
-    <div style="border-style: solid ;border-width: 1px;">
+    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;border-radius:25px ;">
     <h2>${arrayItems[i].name}</h2><br/>
-    <img src="${arrayItems[i].img}" style= "height:300px ;width:300px;"/><br/><br/>
-    <h2>${arrayItems[i].price}</h2><br/>
-    <button class="buy"> add to card</button>
+    <img src="${arrayItems[i].img}" style= "height:300px ;width:300px;"/><br/><br/><hr>
+    <h2 style="margin-top:15px;margin-bottom:15px;">${arrayItems[i].price}</h2><br/>
+    <button class="buy"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}')"> add to cart</button>
     <button id="desAcc${i}"> details</button>
     </div>`);
     let detailAcc = $(`#desAcc${i}`);
@@ -259,17 +280,17 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;border-radius:25px ;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
-    <h3>${arrayItems[i].description}</h3><br/>
+    <h4>${arrayItems[i].description}</h4><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <button class="buyAccessories"> add to card</button>
+    <button class="buyAccessories"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}')"> add to cart</button>
     </div>`);
-      const viewOneItem = $(".buyAccessories");
+     /* const viewOneItem = $(".buyPhone");
       viewOneItem.on("click", () => {
         alert("thank you for buying");
-      });
+      }); */
       section1.hide();
       paragraph1.hide();
       section2.hide();
@@ -287,11 +308,11 @@ for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type movie laptop name + img
   if (arrayItems[i].type === "movie") {
     section4.append(`
-    <div style="border-style: solid ;border-width: 1px;">
+    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;border-radius:25px ;">
     <h2>${arrayItems[i].name}</h2><br/>
-    <img src="${arrayItems[i].img}"/><br/><br/>
+    <img src="${arrayItems[i].img}"/><br/><br/><hr>
     <h2>${arrayItems[i].price}</h2><br/>
-    <button class="buy"> add to card</button>
+    <button class="buy"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}')"> add to cart</button>
     <button id="desMov${i}"> details</button>
     </div>`);
 
@@ -302,17 +323,17 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;border-radius:25px ;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
-    <h3>${arrayItems[i].description}</h3><br/>
+    <h4>${arrayItems[i].description}</h4><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <button class="buyMovie"> add to card</button>
+    <button class="buyMovie"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}')"> add to cart</button>
     </div>`);
-      const viewOneItem = $(".buyMovie");
+      /* const viewOneItem = $(".buyPhone");
       viewOneItem.on("click", () => {
         alert("thank you for buying");
-      });
+      }); */
 
       section1.hide();
       paragraph1.hide();
@@ -346,6 +367,7 @@ laptopPage.on("click", () => {
   section5.hide();
   //we added because every click in btn details return more items
   section5.html("");
+
 });
 // if click in phone show all content phone and Hide the rest of the sections
 phonePage.on("click", () => {
@@ -359,6 +381,7 @@ phonePage.on("click", () => {
   paragraph4.hide();
   section5.hide();
   section5.html("");
+
 });
 // if click in Accessories laptop show all content Accessories laptop and Hide the rest of the sections
 accessoriesPage.on("click", () => {
@@ -372,6 +395,7 @@ accessoriesPage.on("click", () => {
   paragraph4.hide();
   section5.hide();
   section5.html("");
+
 });
 // if click in movie show all content movie and Hide the rest of the sections
 moviePage.on("click", () => {
@@ -385,6 +409,7 @@ moviePage.on("click", () => {
   paragraph3.hide();
   section5.hide();
   section5.html("");
+
 });
 // if click in home show all department
 homePage.on("click", () => {
@@ -397,10 +422,17 @@ homePage.on("click", () => {
   section4.show();
   paragraph4.show();
   section5.hide();
+  section6.hide();
   section5.html("");
+
 });
-//if click on add to card and show alert
-const viewOneItem = $(".buy");
+//if click on add to cart and show alert
+/* const viewOneItem = $(".buy");
 viewOneItem.on("click", () => {
-  alert("thank you for buying");
+   //   console.log("hi")
+
+ // alert("thank you for buying");
 });
+ */
+
+
