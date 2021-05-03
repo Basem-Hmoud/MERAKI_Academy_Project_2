@@ -30,7 +30,7 @@ li:hover {
   color: black;
   height: 50px;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 90px;
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
@@ -109,8 +109,11 @@ h2 {
 }
 
 .detailsPrice{
-  background-color: blue;
+  
   display: grid;
   grid-template-columns: repeat(2,150px);
   width: 350px;
+}
+span{
+  margin-top: 10px;
 }

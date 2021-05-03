@@ -10,6 +10,7 @@ const arrayItems = [
       "Hyundai Thinnote-A, 14.1Celeron Laptop, 4GB RAM, 64GB Storage, Expandable 2.5 SATA HDD Slot, Windows 10 Home S Mode, English - Black",
     price: "230 $",
     rank: "***",
+    quantaty: "",
     type: "laptop",
   },
   {
@@ -19,6 +20,7 @@ const arrayItems = [
       "2021 HP 14 HD Thin and Light Laptop, Intel Core i3-1005G1 Processor, 4GB SDRAM RAM 128GB SSD, HDMI, Webcam, 802.11b/g/n/ac, Bluetooth, Windows 10 S, Silver, W/ IFT Accessories",
     price: "419 $",
     rank: "****",
+    quantaty: "",
     type: "laptop",
   },
   {
@@ -28,6 +30,7 @@ const arrayItems = [
       "Acer Aspire 5 A515-56-36UT | 15.6 Full HD Display | 11th Gen Intel Core i3-1115G4 Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | Amazon Alexa | Windows 10 Home (S Mode)",
     price: "350 $",
     rank: "****",
+    quantaty: "",
     type: "laptop",
   },
   {
@@ -37,6 +40,7 @@ const arrayItems = [
       "DELL 2021 Newest inspiron 15 3000 PC Laptop, 15.6 HD Anti-Glare Non-Touch Display, Intel 2-Core 4205U Processor, 8GB RAM, 128GB PCIe SSD, Webcam, Bluetooth, Win 10",
     price: "439 $",
     rank: "*****",
+    quantaty: "",
     type: "laptop",
   },
   //////////////////////////////phone
@@ -153,6 +157,12 @@ const arrayItems = [
 const arrBuy = [];
 //function(name,price) and use obj
 let Total = 0;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let numofproduct = 1;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 const addToBuy = (nameProdecut, priceProduct, imgProduct) => {
   //let or const add more 1 product
   console.log(nameProdecut, priceProduct);
@@ -160,22 +170,36 @@ const addToBuy = (nameProdecut, priceProduct, imgProduct) => {
   product.name = nameProdecut;
   product.price = priceProduct;
   product.image = imgProduct;
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  let bas = parseInt($("#quantitylaptop").val());
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  console.log(typeof bas);
+  bas = bas * numofproduct;
+  console.log(bas);
   arrBuy.push(product);
-  console.log("hiinfunction");
   //using parseint to convert priceProduct from string to integer
-  Total = Total + parseInt(priceProduct);
- 
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  Total = Total + parseInt(priceProduct)* bas;
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   section6.append(
     `<div class="as detailsPrice">
     <img src="${imgProduct}"/><br/>
-    <h3>Details</h3>
-    <span >name of product ${nameProdecut}</span><br/>
-    <span >  price of product ${priceProduct}</span>
+    <h3 style="margin-top:10px;">Details</h3>
+    <span >name of product </span><br/>
+    <span style="text-align:center;" >${nameProdecut}</span><br/>
+    <span >  price of product</span><br/>
+    <span style="text-align:center;">${priceProduct}</span>
+    <span>quantity</span>
+    <span>${bas}</span>
     </div>`
-    
   );
-  section7.html("")
-  section7.append(Total);
+  section7.html("");
+  section7.append(`<h1>The Total all price of Product ${Total} $</h1>`);
   console.log(Total);
   section1.hide();
   paragraph1.hide();
@@ -187,7 +211,7 @@ const addToBuy = (nameProdecut, priceProduct, imgProduct) => {
   paragraph4.hide();
   section5.hide();
   section6.show(); //show product name and price product after click add to card
-  section7.show()
+  section7.show();
 };
 
 const section1 = $("#section1"); //show content laptop tab
@@ -207,9 +231,9 @@ for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type laptop name + img
   if (arrayItems[i].type === "laptop") {
     section1.append(`
-    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;">
+    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;padding:15px;">
     <h2>${arrayItems[i].name}</h2><br/>
-    <img src="${arrayItems[i].img}"/><br/><br/><hr>
+    <img src="${arrayItems[i].img}" /><br/><br/><hr>
     <h2>${arrayItems[i].price}</h2><br/>
     <button class="buy" onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>
     <button id="deslaptop${i}"> details</button>
@@ -218,12 +242,13 @@ for (let i = 0; i < arrayItems.length; i++) {
     detaillaptop.on("click", () => {
       //to view 1 items
       section5.append(`
-    <div><img src="${arrayItems[i].img}"style= "width: 300;border: solid 1px;border-radius:25px ;height:230px;"/></div>
+    <div><img src="${arrayItems[i].img}"style= "width: 300;border: solid 1px;border-radius:25px ;height:230px;padding:15px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h5>${arrayItems[i].description}</h5><br/>
     <h4>${arrayItems[i].price}</h4><br/>
     <h4>${arrayItems[i].rank}</h4><br/>
+    <input type="text" placeholder="please enter quantity of product" id="quantitylaptop">
     <button class="buylaptop" style= "margin-left:580px;" onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>
     </div>`);
 
@@ -245,9 +270,9 @@ for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type phone name + img
   if (arrayItems[i].type === "phone") {
     section2.append(`
-    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;">
+    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;padding:15px;">
     <h2>${arrayItems[i].name}</h2><br/>
-    <img src="${arrayItems[i].img}" style= "height:300px ;"/><br/><br/><hr>
+    <img src="${arrayItems[i].img}"style="width:200px" /><br/><br/><hr>
     <h2>${arrayItems[i].price}</h2><br/>
     <button class="buy"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>
     <button id="desPhone${i}"> details</button>
@@ -257,7 +282,7 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: 300;border: solid 1px;border-radius:25px ;height:230px;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: 300;border: solid 1px;border-radius:25px ;height:230px;padding:15px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h4>${arrayItems[i].description}</h4><br/>
@@ -286,9 +311,9 @@ for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type Accessories laptop name + img
   if (arrayItems[i].type === "Accessories laptop") {
     section3.append(`
-    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;border-radius:25px ;">
+    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;border-radius:25px ;padding:15px;">
     <h2>${arrayItems[i].name}</h2><br/>
-    <img src="${arrayItems[i].img}" style= "height:300px ;width:300px;"/><br/><br/><hr>
+    <img src="${arrayItems[i].img}" style="width:200px"/><br/><br/><hr>
     <h2 style="margin-top:15px;margin-bottom:15px;">${arrayItems[i].price}</h2><br/>
     <button class="buy"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>
     <button id="desAcc${i}"> details</button>
@@ -298,7 +323,7 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: 300;border: solid 1px;border-radius:25px ;height:230px;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: 300;border: solid 1px;border-radius:25px ;height:230px;padding:15px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h4>${arrayItems[i].description}</h4><br/>
@@ -327,7 +352,7 @@ for (let i = 0; i < arrayItems.length; i++) {
   //return all obj type movie laptop name + img
   if (arrayItems[i].type === "movie") {
     section4.append(`
-    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;border-radius:25px ;">
+    <div style="border-style: solid ;border-width: 1px;border-radius:25px ;border-radius:25px ;padding:15px;">
     <h2>${arrayItems[i].name}</h2><br/>
     <img src="${arrayItems[i].img}"/><br/><br/><hr>
     <h2>${arrayItems[i].price}</h2><br/>
