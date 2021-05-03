@@ -116,4 +116,7 @@ h2 {
 }
 span{
   margin-top: 10px;
+  background-color: blue;
+  text-align: center;
+  width: 300px;
 }

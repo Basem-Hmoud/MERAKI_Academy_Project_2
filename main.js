@@ -176,28 +176,28 @@ const addToBuy = (nameProdecut, priceProduct, imgProduct) => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   console.log(typeof bas);
-  bas = bas * numofproduct;
+  if(isNaN(bas)){bas=1}
+  else{
+  bas = bas * numofproduct;}
   console.log(bas);
   arrBuy.push(product);
   //using parseint to convert priceProduct from string to integer
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  Total = Total + parseInt(priceProduct)* bas;
+  Total = Total + parseInt(priceProduct) * bas;
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   section6.append(
     `<div class="as detailsPrice">
     <img src="${imgProduct}"/><br/>
-    <h3 style="margin-top:10px;">Details</h3>
-    <span >name of product </span><br/>
-    <span style="text-align:center;" >${nameProdecut}</span><br/>
-    <span >  price of product</span><br/>
-    <span style="text-align:center;">${priceProduct}</span>
-    <span>quantity</span>
-    <span>${bas}</span>
+    <h3 style="margin-top:10px; text-align: center;width: 300px;">Details</h3><br/>
+    <span>name of product :${nameProdecut} </span><br/>
+    <span>price of product :${priceProduct} </span><br/>
+    <span>quantity of product :${bas} </span><br/>
     </div>`
   );
+
   section7.html("");
   section7.append(`<h1>The Total all price of Product ${Total} $</h1>`);
   console.log(Total);
