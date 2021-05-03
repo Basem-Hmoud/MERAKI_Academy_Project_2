@@ -27,7 +27,7 @@ const arrayItems = [
     description:
       "Acer Aspire 5 A515-56-36UT | 15.6 Full HD Display | 11th Gen Intel Core i3-1115G4 Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | Amazon Alexa | Windows 10 Home (S Mode)",
     price: "350 $",
-    rank: "",
+    rank: "****",
     type: "laptop",
   },
   {
@@ -36,7 +36,7 @@ const arrayItems = [
     description:
       "DELL 2021 Newest inspiron 15 3000 PC Laptop, 15.6 HD Anti-Glare Non-Touch Display, Intel 2-Core 4205U Processor, 8GB RAM, 128GB PCIe SSD, Webcam, Bluetooth, Win 10",
     price: "439 $",
-    rank: "",
+    rank: "*****",
     type: "laptop",
   },
   //////////////////////////////phone
@@ -46,7 +46,7 @@ const arrayItems = [
     description:
       "Samsung Galaxy S21 5G | Factory Unlocked Android Cell Phone | US Version 5G Smartphone | Pro-Grade Camera, 8K Video, 64MP High Res | 128GB, Phantom Violet (SM-G991UZVAXAA)",
     price: "700 $",
-    rank: "",
+    rank: "**",
     type: "phone",
   },
   {
@@ -54,7 +54,7 @@ const arrayItems = [
     img: "./images/iPhone 7 Plus.png",
     description: "Apple iPhone 7 Plus, 128GB, Black - Fully Unlocked (Renewed)",
     price: "258 $",
-    rank: "",
+    rank: "***",
     type: "phone",
   },
   {
@@ -63,7 +63,7 @@ const arrayItems = [
     description:
       "HUAWEI Nova 5T (128GB, 6GB) 6.26 LCD, Kirin 980, 48MP Quad Camera, 22.5W Fast Charge, Dual SIM GSM Unlocked Global 4G LTE International EU Plug with US Adapter (Black)",
     price: "324 $",
-    rank: "",
+    rank: "***",
     type: "phone",
   },
   {
@@ -72,7 +72,7 @@ const arrayItems = [
     description:
       "Oppo Reno 5 Pro 5G CPH2201 256GB 12GB RAM International Version - Galactic Silver",
     price: "630 $",
-    rank: "",
+    rank: "*****",
     type: "phone",
   },
   //////////////////////////////Accessories laptop
@@ -82,7 +82,7 @@ const arrayItems = [
     description:
       "Wireless Mouse, RATEL 2.4G Wireless Ergonomic Mouse Computer Mouse Laptop Mouse USB Mouse 6 Buttons with Nano Receiver 3 Adjustable DPI Levels Cordless Wireless Mice for Windows, Mac",
     price: "10 $",
-    rank: "",
+    rank: "***",
     type: "Accessories laptop",
   },
   {
@@ -91,7 +91,7 @@ const arrayItems = [
     description:
       "Toshiba (HDTB410XK3AA) Canvio Basics 1TB Portable External Hard Drive USB 3.0, Black",
     price: "45 $",
-    rank: "",
+    rank: "**",
     type: "Accessories laptop",
   },
   {
@@ -99,7 +99,7 @@ const arrayItems = [
     img: "./images/keyboard.png",
     description: "Logitech G213 Prodigy Gaming Keyboard",
     price: "20 $",
-    rank: "",
+    rank: "****",
     type: "Accessories laptop",
   },
   {
@@ -108,7 +108,7 @@ const arrayItems = [
     description:
       "COWIN E7 Active Noise Cancelling Headphones Bluetooth Headphones with Microphone Deep Bass Wireless Headphones Over Ear, Comfortable Protein Earpads, 30 Hours Playtime for Travel/Work, Black",
     price: "50 $",
-    rank: "",
+    rank: "***",
     type: "Accessories laptop",
   },
   //////////////////////////////movie
@@ -118,7 +118,7 @@ const arrayItems = [
     description:
       "The film follows the relentless efforts of a secret animal society (Monarch) when it encounters a group of huge monsters, including the formidable dinosaur Godzilla, who confronts the humanoid three-headed King Gadrawy, leaving humanity with an unknown fate.",
     price: "4 $",
-    rank: "",
+    rank: "*****",
     type: "movie",
   },
   {
@@ -127,7 +127,7 @@ const arrayItems = [
     description:
       "When the body of novelist Harlan Thrombie is found, Detective Plank assumes the task of investigating the crime, only to find himself involved in many events in order to search for the truth.",
     price: "4 $",
-    rank: "",
+    rank: "***",
     type: "movie",
   },
   {
@@ -136,7 +136,7 @@ const arrayItems = [
     description:
       "Burnett - who became an inspector - returns to work with his old colleague (Lori) - who suffers from middle-aged depression, after an Albanian mercenary allocates a prize money for the one who comes in the head of the duo in revenge for his brother who killed at their hands.",
     price: "15 $",
-    rank: "",
+    rank: "****",
     type: "movie",
   },
   {
@@ -145,7 +145,7 @@ const arrayItems = [
     description:
       "Sedan Richards (Lucas Till) is a handsome eighteen-year-old teenage boy, forced by circumstances to move after his father and mother die, and his feet lead him to an isolated town called (Lupine Ridge) after he meets a deranged person named Wild Joe (John Papier Ferguson), In this town, Sedan Richards discovers new facts about the origins of his family, and the ancient history of his true roots.",
     price: "20 $",
-    rank: "",
+    rank: "***",
     type: "movie",
   },
 ];
@@ -162,17 +162,20 @@ const addToBuy = (nameProdecut, priceProduct, imgProduct) => {
   product.image = imgProduct;
   arrBuy.push(product);
   console.log("hiinfunction");
-  //console.log(typeof parseInt(priceProduct));
+  //using parseint to convert priceProduct from string to integer
   Total = Total + parseInt(priceProduct);
+ 
   section6.append(
-    `<div class="as">
-    <img src="${imgProduct}"/>
+    `<div class="as detailsPrice">
+    <img src="${imgProduct}"/><br/>
     <h3>Details</h3>
-    <span style=" background-color:violet">name of product ${nameProdecut}</span>
-    <span style=" background-color:violet">  price of product ${priceProduct}</span>
-    <h1>the total ${Total}  </h1>
+    <span >name of product ${nameProdecut}</span><br/>
+    <span >  price of product ${priceProduct}</span>
     </div>`
+    
   );
+  section7.html("")
+  section7.append(Total);
   console.log(Total);
   section1.hide();
   paragraph1.hide();
@@ -184,6 +187,7 @@ const addToBuy = (nameProdecut, priceProduct, imgProduct) => {
   paragraph4.hide();
   section5.hide();
   section6.show(); //show product name and price product after click add to card
+  section7.show()
 };
 
 const section1 = $("#section1"); //show content laptop tab
@@ -192,6 +196,7 @@ const section3 = $("#section3"); //show content Accessiories laptop tab
 const section4 = $("#section4"); //show content Movie tab
 const section5 = $("#section5"); //show content details tab
 const section6 = $("#section6"); // show content add to cart tab
+const section7 = $("#section7"); // show content add to cart tab
 
 const paragraph1 = $("#paragraph1"); // show laptop in main page
 const paragraph2 = $("#paragraph2"); // show phone in main page
@@ -213,7 +218,7 @@ for (let i = 0; i < arrayItems.length; i++) {
     detaillaptop.on("click", () => {
       //to view 1 items
       section5.append(`
-    <div><img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;border-radius:25px ;"/></div>
+    <div><img src="${arrayItems[i].img}"style= "width: 300;border: solid 1px;border-radius:25px ;height:230px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h5>${arrayItems[i].description}</h5><br/>
@@ -252,11 +257,12 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;border-radius:25px ;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: 300;border: solid 1px;border-radius:25px ;height:230px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h4>${arrayItems[i].description}</h4><br/>
     <h4>${arrayItems[i].price}</h4><br/>
+    <h4>${arrayItems[i].rank}</h4><br/>
     <button style= "margin-left:580px;" class="buyPhone"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>
     </div>`);
       /* const viewOneItem = $(".buyPhone");
@@ -292,11 +298,12 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;border-radius:25px ;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: 300;border: solid 1px;border-radius:25px ;height:230px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h4>${arrayItems[i].description}</h4><br/>
     <h4>${arrayItems[i].price}</h4><br/>
+    <h4>${arrayItems[i].rank}</h4><br/>
     <button style= "margin-left:580px;" class="buyAccessories"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>
     </div>`);
       /* const viewOneItem = $(".buyPhone");
@@ -335,11 +342,12 @@ for (let i = 0; i < arrayItems.length; i++) {
       //to view 1 items
       section5.append(`
     <div>
-    <img src="${arrayItems[i].img}"style= "width: auto;border: solid 1px;border-radius:25px ;"/></div>
+    <img src="${arrayItems[i].img}"style= "width: 300;border: solid 1px;border-radius:25px ;height:230px;"/></div>
     <div class="as">
     <h2>${arrayItems[i].name}</h2><br/>
     <h4>${arrayItems[i].description}</h4><br/>
     <h4>${arrayItems[i].price}</h4><br/>
+    <h4>${arrayItems[i].rank}</h4><br/>
     <button style= "margin-left:580px;" class="buyMovie"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>
     </div>`);
       /* const viewOneItem = $(".buyPhone");
@@ -378,6 +386,7 @@ laptopPage.on("click", () => {
   paragraph4.hide();
   section5.hide();
   section6.hide();
+  section7.hide();
   //we added because every click in btn details return more items
   section5.html("");
 });
@@ -393,6 +402,7 @@ phonePage.on("click", () => {
   paragraph4.hide();
   section5.hide();
   section6.hide();
+  section7.hide();
   section5.html("");
 });
 // if click in Accessories laptop show all content Accessories laptop and Hide the rest of the sections
@@ -407,6 +417,7 @@ accessoriesPage.on("click", () => {
   paragraph4.hide();
   section5.hide();
   section6.hide();
+  section7.hide();
   section5.html("");
 });
 // if click in movie show all content movie and Hide the rest of the sections
@@ -421,6 +432,7 @@ moviePage.on("click", () => {
   paragraph3.hide();
   section5.hide();
   section6.hide();
+  section7.hide();
   section5.html("");
 });
 // if click in home show all department
@@ -435,6 +447,7 @@ homePage.on("click", () => {
   paragraph4.show();
   section5.hide();
   section6.hide();
+  section7.hide();
   section5.html("");
 });
 // const star[];
