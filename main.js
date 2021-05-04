@@ -172,35 +172,38 @@ const addToBuy = (nameProdecut, priceProduct, imgProduct) => {
   product.image = imgProduct;
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  let bas = parseInt($("#quantity").val());
+  let numofQuantity = parseInt($("#quantity").val());
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  console.log(typeof bas);
-  if (isNaN(bas)) {
-    bas = 1;
+  console.log(typeof numofQuantity);
+  if (isNaN(numofQuantity)) {
+    numofQuantity = 1;
   } else {
-    bas = bas * numofproduct;
+    numofQuantity = numofQuantity * numofproduct;
   }
-  console.log(bas);
+  console.log(numofQuantity);
   arrBuy.push(product);
   //using parseint to convert priceProduct from string to integer
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  Total = Total + parseInt(priceProduct) * bas;
+  Total = Total + parseInt(priceProduct) * numofQuantity;
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   section6.append(
-    `<div class="as detailsPrice">
+    `<div class="as detailsPrice" id="delete">
     <img src="${imgProduct}"/><br/>
     <h3 style="margin-top:10px; text-align: center;width: 300px;">Details</h3><br/>
     <span>name of product :${nameProdecut} </span><br/>
     <span>price of product :${priceProduct} </span><br/>
-    <span>quantity of product :${bas} </span><br/>
+    <span>quantity of product :${numofQuantity} </span><br/>
     <button style="margin-top:15px;text-align:center;justify-content: center;margin-left: 90px;">delete item</button>
     </div>`
   );
-
+   const del =$("#delete")
+   del.on("click", () => {
+   del.hide();
+   });
   section7.html("");
   section7.append(`<h1>The Total all price of Product ${Total} $</h1>`);
   console.log(Total);
