@@ -197,6 +197,7 @@ const addToBuy = (nameProdecut, priceProduct, imgProduct) => {
     <span>name of product :${nameProdecut} </span><br/>
     <span>price of product :${priceProduct} </span><br/>
     <span>quantity of product :${bas} </span><br/>
+    <button style="margin-top:15px;text-align:center;justify-content: center;margin-left: 90px;">delete item</button>
     </div>`
   );
 
