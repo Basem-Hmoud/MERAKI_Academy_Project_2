@@ -176,9 +176,11 @@ const addToBuy = (nameProdecut, priceProduct, imgProduct) => {
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   console.log(typeof bas);
-  if(isNaN(bas)){bas=1}
-  else{
-  bas = bas * numofproduct;}
+  if (isNaN(bas)) {
+    bas = 1;
+  } else {
+    bas = bas * numofproduct;
+  }
   console.log(bas);
   arrBuy.push(product);
   //using parseint to convert priceProduct from string to integer
@@ -247,7 +249,7 @@ for (let i = 0; i < arrayItems.length; i++) {
     <h2>${arrayItems[i].name}</h2><br/>
     <h5>${arrayItems[i].description}</h5><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <h4>${arrayItems[i].rank}</h4><br/>
+    <h4 style="color: red;font-size: 60px;">${arrayItems[i].rank}</h4><br/>
     <input type="number" placeholder="select of quantity" id="quantity">
     <button class="buylaptop" style= "margin-left:580px;" onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>
     </div>`);
@@ -287,7 +289,7 @@ for (let i = 0; i < arrayItems.length; i++) {
     <h2>${arrayItems[i].name}</h2><br/>
     <h4>${arrayItems[i].description}</h4><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <h4>${arrayItems[i].rank}</h4><br/>
+    <h4 style="color: red;font-size: 60px;">${arrayItems[i].rank}</h4><br/>
     <input type="number" placeholder="select of quantity" id="quantity">
     <button style= "margin-left:580px;" class="buyPhone"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>
     </div>`);
@@ -329,7 +331,7 @@ for (let i = 0; i < arrayItems.length; i++) {
     <h2>${arrayItems[i].name}</h2><br/>
     <h4>${arrayItems[i].description}</h4><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <h4>${arrayItems[i].rank}</h4><br/>
+    <h4 style="color: red;font-size: 60px;">${arrayItems[i].rank}</h4><br/>
     <input type="number" placeholder="select of quantity" id="quantity">
     <button style= "margin-left:580px;" class="buyAccessories"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>
     </div>`);
@@ -374,7 +376,7 @@ for (let i = 0; i < arrayItems.length; i++) {
     <h2>${arrayItems[i].name}</h2><br/>
     <h4>${arrayItems[i].description}</h4><br/>
     <h4>${arrayItems[i].price}</h4><br/>
-    <h4>${arrayItems[i].rank}</h4><br/>
+    <h4 style="color: red;font-size: 60px;">${arrayItems[i].rank}</h4><br/>
     <input type="number" placeholder="select of quantity" id="quantity">
 
     <button style= "margin-left:580px;" class="buyMovie"onclick="addToBuy('${arrayItems[i].name}','${arrayItems[i].price}','${arrayItems[i].img}')"> add to cart</button>

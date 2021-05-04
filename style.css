@@ -66,7 +66,7 @@ img {
   width: 300px;
 }
 p {
- color:black;
+  color: black;
   font-size: 28px;
   font-weight: bold;
   /*  margin-top: 25px;
@@ -89,7 +89,7 @@ button {
   margin-bottom: 15px;
   padding: 10px;
 }
-button:hover{
+button:hover {
   color: black;
   background-color: white;
 }
@@ -100,7 +100,6 @@ button:hover{
   padding-right: 20px;
   padding-left: 20px;
   font-size: 20px;
-
 }
 @media all and (max-width: 100%) {
 }
@@ -108,18 +107,18 @@ h2 {
   margin-top: 10px;
 }
 
-.detailsPrice{
-  
+.detailsPrice {
   display: grid;
-  grid-template-columns: repeat(2,150px);
+  grid-template-columns: repeat(2, 150px);
   width: 350px;
+  border-width: 1px;border-radius:25px ;padding:15px;border-style: solid ;
 }
-span{
+span {
   margin-top: 10px;
-  background-color: blue;
-  text-align: center;
+  text-align: left;
   width: 300px;
+  padding-left: 47px;
 }
-input{
+input {
   height: 25px;
 }
